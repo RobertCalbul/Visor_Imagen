@@ -1,0 +1,9 @@
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\bin\Debug\Visualizador_imagenes.exe.config
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\bin\Debug\Visualizador_imagenes.exe
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\bin\Debug\Visualizador_imagenes.pdb
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.csprojResolveAssemblyReference.cache
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.Properties.Resources.resources
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.csproj.GenerateResource.Cache
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.exe
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.pdb
+c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.Visor.resources
