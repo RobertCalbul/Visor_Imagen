@@ -12,12 +12,14 @@ namespace Visualizador_imagenes
 {
     public partial class Visor : Form
     {
-        private String ruta_archivo = String.Empty; //path de la imagen
+        private List<String> ruta_archivo = new List<string>(); //path de la imagen
+        private int ident = 0;                  //contador de posicion
         private OpenFileDialog dlg_archivo;     //abre archivo imagen
         public Visor()
         {
             InitializeComponent();
             this.dlg_archivo = new OpenFileDialog(); //se instancea el open dialog
+            this.dlg_archivo.Multiselect = true;    //activa la multiselección
         }
 
         private void btn_cargar_Click(object sender, EventArgs e)
@@ -26,15 +28,15 @@ namespace Visualizador_imagenes
             this.dlg_archivo.Filter = "Imagenes JPG (*.jpg)|*.jpg|Imagenes PNG (*.png)|*.png|Imagenes bmp (*.bmp)|*.bmp";
             //cuando se abre y se selecciona una imagen
             if (this.dlg_archivo.ShowDialog() == DialogResult.OK) {
-                this.ruta_archivo = this.dlg_archivo.FileName;  // se guarda la ruta de la imagen
-                this.contenedor_imagen.Load(ruta_archivo);      //se agrega imagen a picturebox
+                this.ruta_archivo = this.dlg_archivo.FileNames.OfType<String>().ToList();//convertir array en list
+                this.contenedor_imagen.Load(ruta_archivo[0]);      //se agrega imagen a picturebox
             }
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
             this.contenedor_imagen.Image = null;//se elimina el contenido del picturebox
-            this.ruta_archivo = String.Empty;   //se resetea el path de la imagen
+            this.ruta_archivo.RemoveAt(ident);  //elimina la imagen seleccionada
         }
 
         private void btn_copiar_Click(object sender, EventArgs e)
@@ -52,15 +54,31 @@ namespace Visualizador_imagenes
         private void btn_fondo_Click(object sender, EventArgs e)
         {
             //si existe un ruta de imagen
-            if (this.ruta_archivo != String.Empty)
-                Fondo_Class.SetDesktopWallpaper(this.ruta_archivo);//se setea la imagen como fondo de pantalla
+            if (this.ruta_archivo != null)
+                Fondo_Class.SetDesktopWallpaper(this.ruta_archivo[ident]);//se setea la imagen como fondo de pantalla
             else //de lo contrario
                 MessageBox.Show("Carge una imagen antes.");//muestra mensaje de advertencia
         }
 
         private void chk_ajuste_CheckedChanged(object sender, EventArgs e)
         {
+            //cambia la imagen ajustando los parametros
             this.contenedor_imagen.SizeMode = this.chk_ajuste.Checked ? PictureBoxSizeMode.StretchImage : PictureBoxSizeMode.Normal;
+        }
+
+        private void btn_atras_Click(object sender, EventArgs e)
+        {
+            //si el identificador es igual a 0 se seteara la ultima imagen de lo contrario disminuira en 1
+            this.ident = this.ident == 0 ? this.ruta_archivo.Count - 1 : this.ident - 1;
+            this.contenedor_imagen.Load(ruta_archivo[ident]);//muestra imagen
+
+        }
+
+        private void btn_siguiente_Click(object sender, EventArgs e)
+        {
+            //si el identificador es igual al tamaño de la lista seteara la primera imagen de lo contrario aumentara en 1
+            this.ident = this.ident == this.ruta_archivo.Count - 1 ? 0 : this.ident + 1;
+            this.contenedor_imagen.Load(this.ruta_archivo[ident]);//muestra imagen
         }
     }
 }
