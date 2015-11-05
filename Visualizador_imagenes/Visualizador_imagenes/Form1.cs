@@ -12,12 +12,13 @@ namespace Visualizador_imagenes
 {
     public partial class Visor : Form
     {
-        private List<String> ruta_archivo = new List<string>(); //path de la imagen
+        private List<String> ruta_archivo; //path de la imagen
         private int ident = 0;                  //contador de posicion
         private OpenFileDialog dlg_archivo;     //abre archivo imagen
         public Visor()
         {
             InitializeComponent();
+            this.ruta_archivo = null;
             this.dlg_archivo = new OpenFileDialog(); //se instancea el open dialog
             this.dlg_archivo.Multiselect = true;    //activa la multiselección
         }
@@ -68,17 +69,23 @@ namespace Visualizador_imagenes
 
         private void btn_atras_Click(object sender, EventArgs e)
         {
-            //si el identificador es igual a 0 se seteara la ultima imagen de lo contrario disminuira en 1
-            this.ident = this.ident == 0 ? this.ruta_archivo.Count - 1 : this.ident - 1;
-            this.contenedor_imagen.Load(ruta_archivo[ident]);//muestra imagen
+            if (this.ruta_archivo != null)
+            {
+                //si el identificador es igual a 0 se seteara la ultima imagen de lo contrario disminuira en 1
+                this.ident = this.ident == 0 ? this.ruta_archivo.Count - 1 : this.ident - 1;
+                this.contenedor_imagen.Load(ruta_archivo[ident]);//muestra imagen
+            }
 
         }
 
         private void btn_siguiente_Click(object sender, EventArgs e)
         {
-            //si el identificador es igual al tamaño de la lista seteara la primera imagen de lo contrario aumentara en 1
-            this.ident = this.ident == this.ruta_archivo.Count - 1 ? 0 : this.ident + 1;
-            this.contenedor_imagen.Load(this.ruta_archivo[ident]);//muestra imagen
+            if (this.ruta_archivo != null)
+            {
+                //si el identificador es igual al tamaño de la lista seteara la primera imagen de lo contrario aumentara en 1
+                this.ident = this.ident == this.ruta_archivo.Count - 1 ? 0 : this.ident + 1;
+                this.contenedor_imagen.Load(this.ruta_archivo[ident]);//muestra imagen
+            }
         }
     }
 }
