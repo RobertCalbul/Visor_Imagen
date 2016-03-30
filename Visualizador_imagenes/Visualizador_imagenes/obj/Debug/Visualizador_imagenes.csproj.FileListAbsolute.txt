@@ -7,3 +7,12 @@ c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visua
 c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.exe
 c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.pdb
 c:\users\rock_\documents\visual studio 2015\Projects\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.Visor.resources
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\bin\Debug\Visualizador_imagenes.exe.config
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.exe
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.pdb
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\bin\Debug\Visualizador_imagenes.exe
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\bin\Debug\Visualizador_imagenes.pdb
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.csprojResolveAssemblyReference.cache
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.Visor.resources
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.Properties.Resources.resources
+D:\REP GIT HUB\Visor_Imagen\Visualizador_imagenes\Visualizador_imagenes\obj\Debug\Visualizador_imagenes.csproj.GenerateResource.Cache

@@ -13,6 +13,7 @@ namespace Visualizador_imagenes
         private const uint SPI_SETDESKWALLPAPER = 20;
         private const uint SPIF_UPDATEINIFILE = 0x01;
         private const uint SPIF_SENDWINICHANGE = 0x02;
+
         [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool SystemParametersInfo(uint uiAction, uint uiParam, string pvParam, uint fwinIni);

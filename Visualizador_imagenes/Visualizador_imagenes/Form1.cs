@@ -21,6 +21,7 @@ namespace Visualizador_imagenes
             this.ruta_archivo = null;
             this.dlg_archivo = new OpenFileDialog(); //se instancea el open dialog
             this.dlg_archivo.Multiselect = true;    //activa la multiselección
+           
         }
 
         private void btn_cargar_Click(object sender, EventArgs e)
